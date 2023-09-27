@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Doner_Map</string>
+    <string name="shaorma">Shaorma</string>
+    <string name="save">save</string>
+    <string name="doner_kebab">Doner kebab</string>
+    <string name="saus">Saus</string>
+    <string name="vlees">Vlees</string>
+    <string name="ketchup">Ketchup</string>
+    <string name="sla">Sla</string>
+    <string name="tomaat">Tomaat</string>
+    <string name="komkommer">Komkommer</string>
+    <string name="kool">Kool</string>
+    <string name="ui">Ui</string>
+    <string name="kip">Kip</string>
+    <string name="gyros">Gyros</string>
+    <string name="knoflook_saus">Knoflook saus</string>
+    <string name="samurai_saus">Samurai saus</string>
+    <string name="chilisaus">Chilisaus</string>
+    <string name="sambal">Sambal</string>
+    <string name="cocktailsaus">Cocktailsaus</string>
+    <string name="groente">Groente</string>
 </resources>
