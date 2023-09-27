@@ -19,4 +19,6 @@
     <string name="sambal">Sambal</string>
     <string name="cocktailsaus">Cocktailsaus</string>
     <string name="groente">Groente</string>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
 </resources>
