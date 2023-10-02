@@ -3,6 +3,7 @@ package com.example.doner_map
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.service.autofill.OnClickAction
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
@@ -31,8 +32,10 @@ class MainActivity : AppCompatActivity() {
 
             when(it.itemId){
 
-                R.id.nav_home -> Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT).show()
-                R.id.nav_map -> Toast.makeText(applicationContext, "Clicked Map", Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> { val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)}
+                R.id.nav_map -> { val intent = Intent(this, MainActivityMap::class.java)
+                    startActivity(intent) }
                 R.id.nav_profile -> Toast.makeText(applicationContext, "Clicked Profile", Toast.LENGTH_SHORT).show()
                 R.id.nav_ratings -> Toast.makeText(applicationContext, "Clicked Ratings", Toast.LENGTH_SHORT).show()
                 R.id.nav_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
