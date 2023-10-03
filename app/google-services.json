@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "500217585957",
+    "project_id": "donermap",
+    "storage_bucket": "donermap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500217585957:android:13ce82ab98a3feafed7acc",
+        "android_client_info": {
+          "package_name": "com.example.doner_map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500217585957-f4ie8nutos1ev7nm6mgjbqvkaglcgcu2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.doner_map",
+            "certificate_hash": "095d55cd1246b19967fecfb19b4c6c7d49e001db"
+          }
+        },
+        {
+          "client_id": "500217585957-n33abnti6elf30s26ehpevra32k84mp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChpirdxuX8Jj2nW6P7dy3W54SOksC5Y8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500217585957-n33abnti6elf30s26ehpevra32k84mp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
