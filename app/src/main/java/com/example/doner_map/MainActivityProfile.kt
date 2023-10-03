@@ -33,7 +33,7 @@ class MainActivityProfile : AppCompatActivity() {
 
         findViewById<Button>(R.id.SIgnOutBtn).setOnClickListener{
             googleSignInClient.signOut()
-            startActivity(Intent(this , MainActivity::class.java))
+            startActivity(Intent(this , MainActivityLogin::class.java))
         }
     }
 }
