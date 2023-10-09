@@ -36,7 +36,8 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)}
                 R.id.nav_map -> { val intent = Intent(this, MainActivityMap::class.java)
                     startActivity(intent) }
-                R.id.nav_profile -> Toast.makeText(applicationContext, "Clicked Profile", Toast.LENGTH_SHORT).show()
+                R.id.nav_profile -> { val intent = Intent(this, MainActivityLogin::class.java)
+                    startActivity(intent) }
                 R.id.nav_ratings -> Toast.makeText(applicationContext, "Clicked Ratings", Toast.LENGTH_SHORT).show()
                 R.id.nav_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
 
