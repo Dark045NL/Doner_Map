@@ -34,8 +34,8 @@ class Smaakprofiel : AppCompatActivity() {
                 val checkBox = findViewById<CheckBox>(resources.getIdentifier(checkboxId, "id", packageName))
                 val checkBoxText = checkBox.text.toString()
                 //upload checkbox states as checkboxdata and the text of said checkboxes
-                databaseReference.child("checkboxData").child(checkboxId).child("state").setValue(checkBox.isChecked)
-                databaseReference.child("checkboxData").child(checkboxId).child("checkboxText").setValue(checkBoxText)
+                databaseReference.child("Smaakprofiel").child(checkboxId).child("state").setValue(checkBox.isChecked)
+                databaseReference.child("Smaakprofiel").child(checkboxId).child("checkboxText").setValue(checkBoxText)
             }
 
             // Start the MainActivity
@@ -45,7 +45,7 @@ class Smaakprofiel : AppCompatActivity() {
         }
 
         // Attach a ValueEventListener to listen for changes in Firebase
-        databaseReference.child("checkboxData").addValueEventListener(object : ValueEventListener {
+        databaseReference.child("Smaakprofiel").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     // Loop through the data and update checkboxes
