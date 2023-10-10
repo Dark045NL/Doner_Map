@@ -44,5 +44,13 @@ class MainActivityProfile : AppCompatActivity() {
             googleSignInClient.signOut()
             startActivity(Intent(this , MainActivityLogin::class.java))
         }
+        val ivan = findViewById<Button>(R.id.ivan)
+
+        ivan.setOnClickListener {
+            // Define the action to perform when the button is clicked.
+            // For example, you can start another activity.
+            val intent = Intent(this, Smaakprofiel::class.java)
+            startActivity(intent)
+        }
     }
 }
