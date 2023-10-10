@@ -19,13 +19,6 @@ class MainActivityProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_profile)
 
-        val user = FirebaseAuth.getInstance().currentUser
-        val userID = user?.uid
-
-        val database = FirebaseDatabase.getInstance("https://donermap-default-rtdb.europe-west1.firebasedatabase.app/")
-        val usersRef = database.getReference()
-
-        usersRef.setValue(userID)
         auth = FirebaseAuth.getInstance()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

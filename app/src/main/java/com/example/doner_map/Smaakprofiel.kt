@@ -12,8 +12,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.getValue
 
 class Smaakprofiel : AppCompatActivity() {
-    private lateinit var database: FirebaseDatabase
-    private lateinit var checkboxesRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +33,7 @@ class Smaakprofiel : AppCompatActivity() {
                 val checkboxId = "checkBox$i"
                 val checkBox = findViewById<CheckBox>(resources.getIdentifier(checkboxId, "id", packageName))
                 val checkBoxText = checkBox.text.toString()
-                //upload checkbox states as checkboxdata
+                //upload checkbox states as checkboxdata and the text of said checkboxes
                 databaseReference.child("checkboxData").child(checkboxId).child("state").setValue(checkBox.isChecked)
                 databaseReference.child("checkboxData").child(checkboxId).child("checkboxText").setValue(checkBoxText)
             }
