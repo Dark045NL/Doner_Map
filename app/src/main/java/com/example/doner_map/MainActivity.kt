@@ -53,14 +53,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val Ivan = findViewById<Button>(R.id.Ivan)
-
-        Ivan.setOnClickListener {
-            // Define the action to perform when the button is clicked.
-            // For example, you can start another activity.
-            val intent = Intent(this, Smaakprofiel::class.java)
-            startActivity(intent)
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
