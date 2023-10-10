@@ -2,14 +2,12 @@ package com.example.doner_map
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ktx.getValue
 
 class Smaakprofiel : AppCompatActivity() {
 
@@ -46,6 +44,7 @@ class Smaakprofiel : AppCompatActivity() {
 
         // Attach a ValueEventListener to listen for changes in Firebase
         databaseReference.child("Smaakprofiel").addValueEventListener(object : ValueEventListener {
+            val databaseError = FirebaseDatabase.getInstance("https://donermap-default-rtdb.europe-west1.firebasedatabase.app").reference.child("users").child("Errors")
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     // Loop through the data and update checkboxes
@@ -63,7 +62,7 @@ class Smaakprofiel : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Handle error
+                databaseError.child("ErrorInsert").setValue("Error inserting into database.")
             }
         })
 
