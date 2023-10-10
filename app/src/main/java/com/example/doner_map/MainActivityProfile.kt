@@ -8,6 +8,8 @@ import android.widget.TextView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivityProfile : AppCompatActivity() {
 
@@ -16,6 +18,12 @@ class MainActivityProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_profile)
+
+        val user = FirebaseAuth.getInstance().currentUser
+        val userID = user?.uid
+
+        val database = FirebaseDatabase.getInstance()
+        val usersRef = database.getReference("users")
 
         auth = FirebaseAuth.getInstance()
 
