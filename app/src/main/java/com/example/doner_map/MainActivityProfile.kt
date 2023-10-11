@@ -25,39 +25,6 @@ class MainActivityProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_profile)
 
-        val drawerLayout : DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView : NavigationView = findViewById(R.id.nav_view)
-
-        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        navView.setNavigationItemSelectedListener {
-
-            when(it.itemId){
-
-                R.id.nav_home -> { val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)}
-                R.id.nav_map -> { val intent = Intent(this, MainActivityMap::class.java)
-                    startActivity(intent) }
-                R.id.nav_profile -> { val intent = Intent(this, MainActivityLogin::class.java)
-                    startActivity(intent) }
-                R.id.nav_ratings -> Toast.makeText(applicationContext, "Clicked Ratings", Toast.LENGTH_SHORT).show()
-                R.id.nav_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
-
-            }
-            true
-        }
-
-        val user = FirebaseAuth.getInstance().currentUser
-        val userID = user?.uid
-
-        val database = FirebaseDatabase.getInstance("https://donermap-default-rtdb.europe-west1.firebasedatabase.app/")
-        val usersRef = database.getReference()
-
-        usersRef.setValue(userID)
         auth = FirebaseAuth.getInstance()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -84,11 +51,5 @@ class MainActivityProfile : AppCompatActivity() {
             val intent = Intent(this, Smaakprofiel::class.java)
             startActivity(intent)
         }
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (toggle.onOptionsItemSelected(item)){
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 }
