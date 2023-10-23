@@ -39,13 +39,13 @@ class MainActivityProfile : AppCompatActivity() {
 
         findViewById<TextView>(R.id.textView).text = email + "\n" + displayName
 
-        findViewById<Button>(R.id.SIgnOutBtn).setOnClickListener{
+        findViewById<Button>(R.id.SignOutBtn).setOnClickListener{
             googleSignInClient.signOut()
             startActivity(Intent(this , MainActivityLogin::class.java))
         }
-        val ivan = findViewById<Button>(R.id.ivan)
+        val smaakprofiel = findViewById<Button>(R.id.EditSmaakprofiel)
 
-        ivan.setOnClickListener {
+        smaakprofiel.setOnClickListener {
             // Define the action to perform when the button is clicked.
             // For example, you can start another activity.
             val intent = Intent(this, Smaakprofiel::class.java)

@@ -31,7 +31,7 @@ class Smaakprofiel : AppCompatActivity() {
                 val checkboxId = "checkBox$i"
                 val checkBox = findViewById<CheckBox>(resources.getIdentifier(checkboxId, "id", packageName))
                 val checkBoxText = checkBox.text.toString()
-                //upload checkbox states as checkboxdata and the text of said checkboxes
+                //upload checkbox states and the text of said checkboxes as child in smaakprofiel
                 databaseReference.child("Smaakprofiel").child(checkboxId).child("state").setValue(checkBox.isChecked)
                 databaseReference.child("Smaakprofiel").child(checkboxId).child("checkboxText").setValue(checkBoxText)
             }
